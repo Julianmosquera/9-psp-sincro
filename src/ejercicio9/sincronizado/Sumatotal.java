@@ -18,11 +18,13 @@ public class Sumatotal extends Thread{
        
     public synchronized void Sumat() throws InterruptedException{
       
-        System.out.println("Estado 3 "+Tres.isSumado3()+" Estado 5 "+Cinco.isSumado5());
+       // sleep(2000);
+        System.out.println("Estado 3 "+Tres.sumado3+" Estado 5 "+Cinco.sumado5);
         
-        while ((Tres.isSumado3()==false) && (Cinco.isSumado5()==false)) {
+        
+        while ((Tres.sumado3==false) ||(Cinco.sumado5==false)) {
             
-            System.out.println("salgo "+ Tres.isSumado3()+ "   "+ Cinco.isSumado5());
+            System.out.println(Tres.sumado3+ "   "+ Cinco.sumado5);
             wait();
           
         }
